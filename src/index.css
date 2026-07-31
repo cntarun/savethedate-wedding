@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* ============================================================
+   THEME TOKENS — edit colors & fonts here, they flow everywhere.
+   Use as Tailwind classes: bg-teal-deep, text-marigold, etc.
+   ============================================================ */
+@theme {
+  --color-teal-deep: #0d4747;
+  --color-teal-mid: #146060;
+  --color-teal-ink: #082e2e;
+  --color-marigold: #e8a020;
+  --color-marigold-light: #f4c15d;
+  --color-ivory: #fbf6ec;
+  --color-ivory-dim: #f1e8d6;
+  --color-maroon: #6b1f2a;
+  --color-maroon-deep: #4a141d;
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-teal-ink);
+  color: var(--color-ivory);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dotted perforation line used on the boarding pass */
+.perforation {
+  background-image: radial-gradient(circle, currentColor 1.2px, transparent 1.3px);
+  background-size: 10px 10px;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+/* Subtle paper grain for ticket / passport surfaces */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Respect users who prefer less motion — components also check this in JS */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
