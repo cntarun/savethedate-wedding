@@ -14,51 +14,22 @@ export const site = {
   },
 
   wedding: {
-    // Countdown targets the FIRST event (Sangeet, evening of 11 Dec).
-    // Celebrations run 11–13 December 2026.
-    startISO: "2026-12-11T19:00:00+05:30",
+    // Wedding-only invite variant: everything centers on the wedding day.
+    // Countdown targets the wedding (evening of 13 Dec).
+    startISO: "2026-12-13T18:00:00+05:30",
     endISO: "2026-12-13T23:00:00+05:30",
-    dateDisplay: "11 – 13 December 2026",
+    dateDisplay: "13 December 2026",
     city: "Hyderabad",
     country: "India",
-    venue: "Ayana Resorts & Grand Lawns Jalavihar",
+    venue: "Grand Lawns Jalavihar, Hyderabad",
   },
 
-  // The three-day wedding weekend. Powers the itinerary section AND the
-  // multi-event calendar file. Times are IST (+05:30) — adjust start/end
-  // hours here if the schedule firms up; everything else updates itself.
+  // Single event (the wedding). Powers the itinerary card AND the calendar
+  // file. Times are IST (+05:30) — adjust the hours here if they firm up.
   events: [
     {
-      id: "sangeet",
-      day: 1,
-      dayName: "Friday",
-      date: "11 December 2026",
-      name: "Sangeet",
-      time: "Evening",
-      venue: "Ayana Resorts, Hyderabad",
-      dressCode:
-        "Vibrant Indo-Western - think sequins & glitters; dance-ready is the dress code.",
-      icon: "music", // music note
-      startISO: "2026-12-11T19:00:00+05:30",
-      endISO: "2026-12-11T23:00:00+05:30",
-    },
-    {
-      id: "haldi",
-      day: 2,
-      dayName: "Saturday",
-      date: "12 December 2026",
-      name: "Haldi",
-      time: "Morning",
-      venue: "Ayana Resorts, Hyderabad",
-      dressCode:
-        "Sunshine hues - yellows, oranges, and florals.",
-      icon: "flower", // turmeric / marigold bloom
-      startISO: "2026-12-12T10:00:00+05:30",
-      endISO: "2026-12-12T13:00:00+05:30",
-    },
-    {
       id: "wedding",
-      day: 3,
+      day: 1,
       dayName: "Sunday",
       date: "13 December 2026",
       name: "Wedding",

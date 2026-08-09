@@ -14,18 +14,27 @@ import { Music, Flower2, Rings, iconProps } from "./icons.jsx";
 const ICONS = { music: Music, flower: Flower2, rings: Rings };
 
 export default function Itinerary() {
+  // Wedding-only variant: a single event reads as one centered card, no
+  // "Day 0X" badge and no 3-across grid.
+  const single = site.events.length === 1;
   return (
     <section className="relative px-5 py-24 sm:px-8">
       <header className="mx-auto mb-14 max-w-xl text-center">
         <p className="mb-3 text-xs font-medium uppercase tracking-[0.4em] text-marigold-light">
-          Three days of celebration
+          {single ? "Join us as we say I do" : "Three days of celebration"}
         </p>
         <h2 className="font-display text-4xl font-semibold text-ivory sm:text-5xl">
-          The Wedding Weekend
+          {single ? "The Celebration" : "The Wedding Weekend"}
         </h2>
       </header>
 
-      <ol className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
+      <ol
+        className={
+          single
+            ? "mx-auto flex max-w-sm justify-center"
+            : "mx-auto grid max-w-5xl gap-6 md:grid-cols-3"
+        }
+      >
         {site.events.map((ev, i) => (
           <motion.li
             key={ev.id}
@@ -40,10 +49,12 @@ export default function Itinerary() {
             }}
             whileTap={{ scale: 0.98 }}
           >
-            {/* Day badge */}
-            <span className="rounded-full border border-marigold/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-marigold-light">
-              Day 0{ev.day}
-            </span>
+            {/* Day badge — hidden for the single-event (wedding-only) variant */}
+            {!single && (
+              <span className="rounded-full border border-marigold/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-marigold-light">
+                Day 0{ev.day}
+              </span>
+            )}
 
             {/* Icon in a gold ring — line icon, lifts slightly on card hover */}
             <span className="mt-6 flex h-14 w-14 items-center justify-center rounded-full border border-marigold/40 bg-marigold/10 text-marigold transition-[background-color,transform] duration-300 group-hover:scale-105 group-hover:bg-marigold/20">

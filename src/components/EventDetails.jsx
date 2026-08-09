@@ -11,6 +11,8 @@ import { CalendarPlus, ArrowUpRight, iconProps } from "./icons.jsx";
    ============================================================ */
 
 export default function EventDetails() {
+  const single = site.events.length === 1; // wedding-only invite variant
+
   const celebrate = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     burstConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2, 70);
@@ -40,7 +42,7 @@ export default function EventDetails() {
           {site.wedding.city}, {site.wedding.country}
         </p>
 
-        {/* Main CTA — downloads the combined 3-event .ics */}
+        {/* Main CTA — downloads the .ics (single wedding event here) */}
         <motion.button
           type="button"
           onClick={addAll}
@@ -49,12 +51,14 @@ export default function EventDetails() {
           whileTap={{ scale: 0.94 }}
         >
           <CalendarPlus className="h-5 w-5" {...iconProps} />
-          Add all events to calendar
+          {single ? "Add to calendar" : "Add all events to calendar"}
         </motion.button>
 
         {/* Helper text */}
         <p className="mt-4 text-sm text-ivory/55">
-          Add all three events at once, or add them individually below
+          {single
+            ? "Download the invite, or add it to Google below"
+            : "Add all three events at once, or add them individually below"}
         </p>
 
         {/* Per-event Google Calendar one-click links */}

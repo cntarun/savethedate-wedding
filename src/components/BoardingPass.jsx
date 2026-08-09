@@ -140,7 +140,7 @@ export default function BoardingPass({ onDone }) {
               {/* Details row */}
               <div className="grid grid-cols-3 gap-2 px-5 pb-5 pt-2">
                 <Field label="Flight" value="4EVER" />
-                <Field label="Boarding" value="11 DEC 2026" />
+                <Field label="Boarding" value="13 DEC 2026" />
                 <Field
                   label="Dest"
                   value={

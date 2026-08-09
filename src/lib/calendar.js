@@ -25,7 +25,7 @@ function escapeICS(text) {
 }
 
 function eventDescription(ev) {
-  return `${ev.name} (${ev.time}) — part of ${him} & ${her}'s wedding weekend. ${hashtag}`;
+  return `${ev.name} (${ev.time}) — join ${him} & ${her} to celebrate their wedding. ${hashtag}`;
 }
 
 /** One BEGIN:VEVENT…END:VEVENT block per event.
