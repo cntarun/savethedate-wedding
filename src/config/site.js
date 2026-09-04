@@ -23,7 +23,7 @@ export const site = {
     message:
       "With hearts full of joy, we invite you to celebrate the wedding of our son, " +
       "Tarun, to Priya. Watching him find his partner in life has been our greatest " +
-      "happiness, and we would be honoured to have you — our dear family and friends — " +
+      "happiness, and we would be honoured to have you; our dear family and friends, " +
       "with us as we welcome Priya into our family. Your presence and blessings would " +
       "mean the world to us.",
     signature: "— The Chellaboyina family",
@@ -103,8 +103,8 @@ export const site = {
       title: "The leap",
       year: "Masters, together",
       text:
-        "We packed two suitcases and one shared dream, and moved across the world " +
-        "for our Masters. New language, new winters, " +
+        "They packed two suitcases and one shared dream, and moved across the world " +
+        "for their Masters. New language, new winters, " +
         "and France became our second home. ",
       photo: {
         base: "france",

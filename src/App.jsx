@@ -4,7 +4,6 @@ import AmbientBackground from "./components/AmbientBackground.jsx";
 import ParentsInvite from "./components/ParentsInvite.jsx";
 import Hero from "./components/Hero.jsx";
 import JourneyMap from "./components/JourneyMap.jsx";
-import Proposals from "./components/Proposals.jsx";
 import PassportStamp from "./components/PassportStamp.jsx";
 import Countdown from "./components/Countdown.jsx";
 import EventDetails from "./components/EventDetails.jsx";
@@ -27,7 +26,6 @@ export default function App() {
         <ParentsInvite started={entered} />
         <Hero started={entered} />
         <JourneyMap />
-        <Proposals />
         <PassportStamp />
         <Countdown />
         <EventDetails />
