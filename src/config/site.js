@@ -26,7 +26,7 @@ export const site = {
       "happiness, and we would be honoured to have you — our dear family and friends — " +
       "with us as we welcome Priya into our family. Your presence and blessings would " +
       "mean the world to us.",
-    signature: "— The [TODO: family name] family", // [TODO] e.g. "— The Chellaboyina family"
+    signature: "— The Chellaboyina family",
     photo: {
       base: "parents",
       aspect: "3 / 4", // portrait; update if your photo is a different shape
