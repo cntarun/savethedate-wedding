@@ -16,6 +16,9 @@ dist-ssr
 # The web-optimized versions in public/photos ARE committed and deployed.
 raw-photos/
 
+# Local tooling/session data — never publish.
+.claw/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

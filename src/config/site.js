@@ -13,6 +13,27 @@ export const site = {
     hashtag: "#TarunWedsPriya", // [TODO] change if you have a real hashtag
   },
 
+  // A note from the parents — the opening section of this wedding-only
+  // variant, so the family can share the link with their own guests.
+  // Drop the photo named `parents.*` into /raw-photos and run `npm run images`.
+  parents: {
+    eyebrow: "With love, from the family",
+    heading: "Our son is getting married",
+    // Warm invitation message. Edit freely — line breaks are fine.
+    message:
+      "With hearts full of joy, we invite you to celebrate the wedding of our son, " +
+      "Tarun, to Priya. Watching him find his partner in life has been our greatest " +
+      "happiness, and we would be honoured to have you — our dear family and friends — " +
+      "with us as we welcome Priya into our family. Your presence and blessings would " +
+      "mean the world to us.",
+    signature: "— The [TODO: family name] family", // [TODO] e.g. "— The Chellaboyina family"
+    photo: {
+      base: "parents",
+      aspect: "3 / 4", // portrait; update if your photo is a different shape
+      alt: "Tarun's parents in traditional South Indian attire, inviting guests to the wedding",
+    },
+  },
+
   wedding: {
     // Wedding-only invite variant: everything centers on the wedding day.
     // Countdown targets the wedding (evening of 13 Dec).

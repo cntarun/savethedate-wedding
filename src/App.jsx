@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BoardingPass from "./components/BoardingPass.jsx";
 import AmbientBackground from "./components/AmbientBackground.jsx";
+import ParentsInvite from "./components/ParentsInvite.jsx";
 import Hero from "./components/Hero.jsx";
 import JourneyMap from "./components/JourneyMap.jsx";
 import Proposals from "./components/Proposals.jsx";
@@ -23,6 +24,7 @@ export default function App() {
       <AmbientBackground />
 
       <div className="relative z-20">
+        <ParentsInvite started={entered} />
         <Hero started={entered} />
         <JourneyMap />
         <Proposals />
