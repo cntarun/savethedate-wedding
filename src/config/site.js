@@ -105,7 +105,7 @@ export const site = {
       text:
         "They packed two suitcases and one shared dream, and moved across the world " +
         "for their Masters. New language, new winters, " +
-        "and France became our second home. ",
+        "and France became their second home. ",
       photo: {
         base: "france",
         aspect: "2 / 3",
